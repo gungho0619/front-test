@@ -68,3 +68,7 @@ td {
   height: 120px; /* Fixed height */
   text-align: center;
 }
+
+.td_clicked {
+  background-color: #3dcf50; /* Change to your desired color */
+}

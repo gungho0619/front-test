@@ -1,8 +1,14 @@
-import { useState } from "react";
+import React, { useState } from "react";
 import Layout from "../../layouts";
 import "swiper/css";
 import "swiper/css/navigation";
-import { Broccoli, Celery, Sunflower } from "../../constants/Images";
+import {
+  Broccoli,
+  Celery,
+  Sunflower,
+  Cosmos,
+  Cabbage,
+} from "../../constants/Images";
 import Modal from "@mui/material/Modal";
 import Draggable from "react-draggable";
 import "./index.css";
@@ -10,15 +16,19 @@ import { Navigation, Pagination } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Plants } from "../../constants/Plants";
 import PlantModal from "../../components/Modal.jsx";
-import { Box, Typography, Button, TextField } from "@mui/material/"; // Import Typography
+import { Box, Typography, Button, TextField } from "@mui/material/";
+import Plant from "../Plant1/index.jsx";
 
 const GardenMap = () => {
   const [open, setOpen] = useState(false);
-  const [modalContent, setModalContent] = useState(""); // Correct type for modalContent
+  const [modalContent, setModalContent] = useState(""); // Initialize with empty string
 
-  const [rows, setRows] = useState(5);
-  const [columns, setColumns] = useState(16);
+  const [rows, setRows] = useState(3);
+  const [columns, setColumns] = useState(3);
   const [table, setTable] = useState([]);
+  const [pos, setPos] = useState(null);
+
+  const [selectedItem, setSelectedItem] = useState([]);
 
   const handleOpen = (content) => {
     setOpen(true);
@@ -27,7 +37,7 @@ const GardenMap = () => {
 
   const handleClose = () => {
     setOpen(false);
-    setModalContent(null); // Clear content when closing
+    setModalContent(""); // Clear content when closing
   };
 
   const handleCreateTable = () => {
@@ -35,6 +45,19 @@ const GardenMap = () => {
       Array.from({ length: columns }, () => "")
     );
     setTable(newTable);
+  };
+
+  const handlePick = (item) => {
+    return () => {
+      setSelectedItem((prevSelectedItems) => {
+        const newSelectedItems = [...prevSelectedItems];
+        if (pos !== null) {
+          newSelectedItems[pos] = item;
+        }
+        return newSelectedItems;
+      });
+      handleClose();
+    };
   };
 
   return (
@@ -99,7 +122,32 @@ const GardenMap = () => {
                 {table.map((row, rowIndex) => (
                   <tr key={rowIndex}>
                     {row.map((_, colIndex) => (
-                      <td key={colIndex}></td>
+                      <td
+                        key={rowIndex * columns + colIndex}
+                        className={
+                          pos === rowIndex * columns + colIndex
+                            ? "td_clicked"
+                            : ""
+                        }
+                        onClick={() => {
+                          setPos(rowIndex * columns + colIndex);
+                        }}
+                      >
+                        {selectedItem &&
+                          selectedItem[rowIndex * columns + colIndex] && (
+                            <img
+                              src={
+                                selectedItem[rowIndex * columns + colIndex]
+                                  .image
+                              }
+                              alt={
+                                selectedItem[rowIndex * columns + colIndex].name
+                              }
+                              width={100}
+                              height={100}
+                            />
+                          )}
+                      </td>
                     ))}
                   </tr>
                 ))}
@@ -111,16 +159,31 @@ const GardenMap = () => {
         <PlantModal open={open} handleClose={handleClose}>
           <Typography>{modalContent}</Typography>
           <Box sx={{ display: "flex", gap: "12px", userSelect: "none" }}>
-            <Draggable
-            // axis="both"
-            // onStart={(e, data) => console.log("Started:", e, data)}
-            // onDrag={(e, data) => console.log("Dragging:", e, data)}
-            // onStop={(e, data) => console.log("Stopped:", e, data)}
-            >
-              <Box sx={{ userSelect: "none" }}>
-                <img src={Broccoli} width={80} height={80} alt="Broccoli" />
-              </Box>
-            </Draggable>
+            <Box onClick={handlePick(Plants[0])}>
+              <img
+                src={Plants[0].image}
+                width={80}
+                height={80}
+                alt="Broccoli"
+              />
+            </Box>
+            <Box onClick={handlePick(Plants[1])}>
+              <img src={Plants[1].image} width={80} height={80} alt="Celery" />
+            </Box>
+            <Box onClick={handlePick(Plants[2])}>
+              <img
+                src={Plants[2].image}
+                width={80}
+                height={80}
+                alt="Sunflower"
+              />
+            </Box>
+            <Box onClick={handlePick(Plants[3])}>
+              <img src={Plants[3].image} width={80} height={80} alt="Cosmos" />
+            </Box>
+            <Box onClick={handlePick(Plants[4])}>
+              <img src={Plants[4].image} width={80} height={80} alt="Cabbage" />
+            </Box>
           </Box>
         </PlantModal>
       </div>
