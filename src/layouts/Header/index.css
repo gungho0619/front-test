@@ -1,0 +1,87 @@
+.header-grid {
+    left: 0;
+    top: 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 100vw;
+    height: 100px;
+    padding: 0px 80px;
+    box-sizing: border-box;
+    z-index: 10;
+}
+
+.header-item {
+    text-align: center;
+}
+.header-logo {
+    filter: invert(20%);
+}
+.header-login {
+    font-size: 16px;
+    letter-spacing: 1px;
+    font-weight: bold;
+    cursor: pointer;
+    padding: 0.8rem 2.5rem;
+    color: white;
+    background-color: rgb(4, 168, 132);
+    border: 2px solid rgb(4, 168, 132);
+    border-radius: 2rem;
+    transition: color .15s ease-in-out, background-color .15s ease-in-out, border-color .15s ease-in-out, box-shadow .15s ease-in-out;
+
+    &:hover {
+        color: white;
+        background-color: transparent;
+        background-color: rgb(68, 201, 172);
+    }
+
+    &:active {
+        color: rgb(4, 168, 132);
+        background-color: white;
+        border-color: #cae9d8;
+    }
+}
+
+.header-signup {
+    font-size: 16px;
+    letter-spacing: 1px;
+    font-weight: bold;
+    cursor: pointer;
+    padding: 0.8rem 2.5rem;
+    color: rgb(4, 168, 132);
+    background-color: white;
+    border: none;
+    border-radius: 2rem;
+    transition: color .15s ease-in-out, background-color .15s ease-in-out, border-color .15s ease-in-out, box-shadow .15s ease-in-out;
+
+    &:hover {
+        color: rgb(68, 201, 172);
+        background-color: white;
+    }
+
+    &:active {
+        color: rgb(4, 168, 132);
+        background-color: white;
+    }
+}
+
+.navbar {
+    display: flex;
+    flex-direction: row;
+    gap: 80px;
+}
+
+.nav-item {
+    text-decoration: none;
+    letter-spacing: 1px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    color: white;
+    font-size: 20px;
+}
+
+.btn-grid {
+    display: flex;
+    font-display: row;
+    gap: 20px;
+}

@@ -1,0 +1,26 @@
+.plant-topimg {
+    width: 100%;
+    background-image: url('/src/assets/img/Image Placeholder (7).png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    text-align: center;
+    box-sizing: border-box;
+}
+
+.search-txt {
+    font-size: 40px;
+    color: white;
+    margin: 0;
+}
+
+.search-txt-below {
+    font-weight: 100;
+    letter-spacing: 1px;
+    font-size: 15px;
+    color: white;
+    width: 60%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}

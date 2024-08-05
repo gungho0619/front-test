@@ -1,0 +1,501 @@
+* {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+.landing-topimg {
+    width: 100%;
+    background-image: url('/src/assets/img/image 1.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    text-align: center;
+    box-sizing: border-box;
+    padding: 50px;
+}
+
+.top-txt {
+    font-size: 100px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    color: white;
+    margin: 0;
+}
+
+.top-txt-below {
+    font-size: 15px;
+    color: white;
+    font-weight: 100;
+    letter-spacing: 1px;
+}
+
+.top-btn-grid {
+    display: flex;
+    font-display: row;
+    justify-content: center;
+    gap: 40px;
+    margin-top: 40px;
+}
+.top-started {
+    font-size: 16px;
+    letter-spacing: 1px;
+    font-weight: bold;
+    cursor: pointer;
+    padding: 1.2rem 2rem;
+    color: white;
+    background-color: rgb(4, 168, 132);
+    border: 2px solid rgb(4, 168, 132);
+    border-radius: 2rem;
+    transition: color .15s ease-in-out, background-color .15s ease-in-out, border-color .15s ease-in-out, box-shadow .15s ease-in-out;
+
+    &:hover {
+        color: white;
+        background-color: transparent;
+        background-color: rgb(68, 201, 172);
+    }
+
+    &:active {
+        color: rgb(4, 168, 132);
+        background-color: white;
+        border-color: #cae9d8;
+    }
+}
+
+.top-learn {
+    font-size: 16px;
+    letter-spacing: 1px;
+    font-weight: bold;
+    cursor: pointer;
+    padding: 1.2rem 2rem;
+    color: rgb(4, 168, 132);
+    background-color: white;
+    border: none;
+    border-radius: 2rem;
+    transition: color .15s ease-in-out, background-color .15s ease-in-out, border-color .15s ease-in-out, box-shadow .15s ease-in-out;
+
+    &:hover {
+        color: rgb(68, 201, 172);
+        background-color: white;
+    }
+
+    &:active {
+        color: rgb(4, 168, 132);
+        background-color: white;
+    }
+}
+
+.top-state-grid {
+    display: flex;
+    flex-direction: row;
+    width: 600px;
+    margin: auto;
+    justify-content: space-between;
+    background-color: white;
+    border-radius: 10px;
+    padding: 20px;
+    box-sizing: border-box;
+    align-items: center;
+    margin-top: 50px;
+}
+
+.state-item-p1 {
+    font-size: 30px;
+    font-weight: bold;
+    margin: 0;
+}
+
+.state-item-plus {
+    font-size: 25px;
+    color: rgb(4, 168, 132);
+    font-weight: bold;
+}
+
+.state-item-p2 {
+    font-size: 10px;
+    font-weight: 100;
+    margin: 0;
+    color: gray;
+}
+
+.plants-container {
+}
+
+.private-plants-txt {
+    font-size: 60px;
+    font-weight: bold;
+    color: black;
+    margin: 0;
+}
+
+.private-plants-txt-below {
+    margin-top: 20px;
+    font-size: 12px;
+    font-weight: 100;
+    color: gray;
+    width: 700px;
+}
+
+.private-plants-item-title {
+    font-size: 22px;
+    font-weight: bold;
+    color: black;
+    margin: 0;
+    width: 400px;
+}
+
+.private-plants-item-title-below {
+    margin-top: 20px;
+    font-size: 12px;
+    font-weight: 100;
+    color: gray;
+}
+
+.choose-us-txt {
+    font-size: 60px;
+    font-weight: bold;
+    color: black;
+    margin: 0;
+}
+
+.choose-us-txt-below {
+    margin-top: 20px;
+    font-size: 12px;
+    font-weight: 100;
+    color: gray;
+}
+
+.choose-us-container {
+    display: block;
+    position: relative;
+    padding-left: 40px;
+    margin-bottom: 12px;
+    cursor: pointer;
+    font-size: 18px;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    margin-bottom: 30px;
+}
+
+/* Hide the browser's default checkbox */
+.choose-us-container input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+}
+
+/* Create a custom checkbox */
+.choose-us-checkmark {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 25px;
+    width: 25px;
+    background-color: #eee;
+    border-radius:8px;
+}
+
+/* On mouse-over, add a grey background color */
+.choose-us-container:hover input ~ .choose-us-checkmark {
+    background-color: #ccc;
+}
+
+/* When the checkbox is checked, add a blue background */
+.choose-us-container input:checked ~ .choose-us-checkmark {
+    background-color: rgb(4, 168, 132);
+}
+
+/* Create the checkmark/indicator (hidden when not checked) */
+.choose-us-checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+}
+
+/* Show the checkmark when checked */
+.choose-us-container input:checked ~ .choose-us-checkmark:after {
+    display: block;
+}
+
+/* Style the checkmark/indicator */
+.choose-us-container .choose-us-checkmark:after {
+    left: 9px;
+    top: 5px;
+    width: 5px;
+    height: 10px;
+    border: solid white;
+    border-width: 0 3px 3px 0;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+}
+
+.services-container {
+    margin-top: 50px;
+}
+
+.services-img {
+    &:hover img {
+        filter: saturate(150);
+    }
+    &:hover {
+        background-color: rgb(4, 168, 132);
+        color: white;
+    }
+}
+
+.gallery-container {
+    margin-top: 100px;
+}
+
+.gallery-txt {
+    font-size: 60px;
+    font-weight: bold;
+    color: black;
+    margin: auto;
+    width: 400px;
+    text-align: center;
+}
+
+.gallery-txt-below {
+    margin-top: 20px;
+    font-size: 12px;
+    font-weight: 100;
+    color: gray;
+    text-align: center;
+    width: 600px;
+    margin: auto
+}
+
+
+.about-container {
+    margin-top: 100px;
+}
+
+.about-txt {
+    font-size: 60px;
+    font-weight: bold;
+    color: black;
+    margin: auto;
+    text-align: center;
+}
+
+.about-txt-below {
+    margin-top: 20px;
+    font-size: 12px;
+    font-weight: 100;
+    color: gray;
+    text-align: center;
+    width: 600px;
+    margin: auto
+}
+
+.about-grid-item {
+    &:hover {
+        background-color: rgb(4, 168, 132);
+        color: white;
+    }
+    &:hover .about-item-content {
+        color: white;
+    }
+    &:hover .about-item-job {
+        color: white;
+    }
+}
+
+.about-item-img {
+    position: absolute;
+    left: -50px;
+    top: calc(50% - 50px);
+    width: 100px;
+    height: 100px;
+}
+
+.about-item-content {
+    font-size: 14px;
+    margin-top: 5px;
+    color: gray;
+}
+
+.about-item-name {
+    margin: 5px 0px;
+    font-weight: bold;
+    font-size: 22px;
+}
+
+.about-item-job {
+    margin: 0;
+    font-size: 11px;
+    color: gray;
+}
+
+.faq-container {
+    margin-top: 100px;
+}
+
+.faq-txt {
+    font-size: 60px;
+    font-weight: bold;
+    color: black;
+    margin: auto;
+    text-align: center;
+}
+
+.faq-txt-below {
+    font-size: 12px;
+    font-weight: 100;
+    color: gray;
+    text-align: center;
+    width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 20px;
+}
+
+.faq-collapse {
+    border-radius: 20px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.1), 0 6px 20px 0 rgba(0, 0, 0, 0.09);
+    padding: 20px 40px;
+    margin: 20px;
+    cursor: pointer;
+    &:hover {
+        background-color: rgb(4, 168, 132);
+        color: white;
+    }
+}
+
+.collapse-title {
+    font-size: 25px;
+    font-weight: bold;
+}
+
+.collapse-content {
+    margin: 0;
+    max-height: 0;
+    font-size: 16px;
+    overflow: hidden;
+    transition: max-height 0.2s ease-out;
+}
+
+
+.blog-container {
+    margin-top: 100px;
+}
+
+
+.blog-txt {
+    font-size: 60px;
+    font-weight: bold;
+    color: black;
+    margin: auto;
+    text-align: center;
+}
+
+.blog-txt-below {
+    font-size: 12px;
+    font-weight: 100;
+    color: gray;
+    text-align: center;
+    width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 20px;
+}
+
+.blog-learn {
+    font-size: 16px;
+    letter-spacing: 1px;
+    font-weight: bold;
+    cursor: pointer;
+    padding: 1.2rem 2rem;
+    color: white;
+    background-color: rgb(4, 168, 132);
+    border: 2px solid rgb(4, 168, 132);
+    border-radius: 2rem;
+    transition: color .15s ease-in-out, background-color .15s ease-in-out, border-color .15s ease-in-out, box-shadow .15s ease-in-out;
+    width: 100%;
+    &:hover {
+        color: white;
+        background-color: transparent;
+        background-color: rgb(68, 201, 172);
+    }
+
+    &:active {
+        color: rgb(4, 168, 132);
+        background-color: white;
+        border-color: #cae9d8;
+    }
+}
+
+.contact-container {
+    margin-top: 100px;
+}
+
+.contact-txt {
+    font-size: 60px;
+    font-weight: bold;
+    color: black;
+    margin: auto;
+    text-align: center;
+}
+
+.contact-txt-below {
+    font-size: 12px;
+    font-weight: 100;
+    color: gray;
+    text-align: center;
+    width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 20px;
+}
+
+.contact-label {
+    color: #f7f8fa;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.contact-input {
+    width: 50%;
+    padding: 1rem 1rem;
+    font-weight: 400;
+    border: 2px solid #f7f8fa;
+    color: #f7f8fa;
+    line-height: 1.5;
+    appearance: none;
+    background-color: transparent;
+    transition: none;
+    border-radius: 3rem;
+    outline: none;
+    font-size: 1rem;
+    margin-bottom: 1.5rem;
+    &:focus {
+        background-color: transparent;
+    }
+}
+
+.contact-input::placeholder {
+    color: #f7f8fa;
+}
+
+.contact-readMore {
+    font-size: 16px;
+    letter-spacing: 1px;
+    font-weight: bold;
+    cursor: pointer;
+    padding: 1.2rem 2rem;
+    color: rgb(4, 168, 132);
+    background-color: white;
+    border: 2px solid #cae9d8;
+    border-radius: 2rem;
+    transition: color .15s ease-in-out, background-color .15s ease-in-out, border-color .15s ease-in-out, box-shadow .15s ease-in-out;
+    width: 100%;
+    &:hover {
+        background-color: rgb(156, 245, 226);
+    }
+
+    &:active {
+        color: white;
+        background-color: rgb(4, 168, 132);
+        border: 2px solid rgb(255, 255, 255);
+    }
+}

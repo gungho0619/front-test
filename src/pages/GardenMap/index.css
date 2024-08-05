@@ -1,0 +1,70 @@
+* {
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+}
+
+.container {
+  height: 80vh;
+  padding: 32px;
+  background-color: #4caf50;
+  display: flex;
+  gap: 20px;
+}
+
+.swiper {
+  height: 100%;
+}
+
+.swiper-wrapper {
+  width: 120px;
+  border-radius: 20%;
+}
+
+.swiper-slide {
+  text-align: center;
+  font-size: 18px;
+  background: transparent;
+  width: 120px;
+
+  /* Center slide text vertically */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: transform 0.3s ease-in-out; /* Smooth animation */
+}
+
+.swiper-slide:active {
+  transform: translateY(-10px); /* Animation effect on click */
+}
+
+.swiper-slide img {
+  width: 120px;
+  height: 120px;
+}
+
+.swiper-vertical .swiper-button-next,
+.swiper-vertical .swiper-button-prev {
+  left: 60px;
+  transform: rotate(90deg);
+  transform-origin: left center;
+  color: #e2e2e2;
+}
+.swiper-vertical .swiper-button-prev {
+  top: calc(var(--swiper-navigation-size) / 2);
+}
+.swiper-vertical .swiper-button-next {
+  top: auto;
+  bottom: calc(var(--swiper-navigation-size) / 2);
+}
+
+table {
+  margin: 20px 0;
+  border-collapse: collapse;
+}
+
+th,
+td {
+  border: 1px solid #ccc;
+  width: 120px; /* Fixed width */
+  height: 120px; /* Fixed height */
+  text-align: center;
+}
